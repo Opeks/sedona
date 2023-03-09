@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Гостиницы</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
   <header class="page-header">
-    <img class="logo" src="" alt="логотип сайта">
+    <img class="logo" src="images/logo.png" alt="логотип сайта" width="139" height="70">
     <ul class="navigation-list">
       <li class="navigation-item">
-        <a class="navigation-link" href="index.html">Главная</a>
+        <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
       </li>
       <li class="navigation-item">
-        <a class="navigation-link " href="about.html">О Седоне</a>
+        <a class="navigation-link" href="about.html">О Седоне</a>
       </li>
       <li class="navigation-item">
-        <a class="navigation-link navigation-link-current" href="hotels.html">Гостиницы</a>
+        <a class="navigation-link" href="hotels.html">Гостиницы</a>
       </li>
     </ul>
     <ul class="navigation-list navigation-user">
@@ -37,7 +38,7 @@
         </a>
       </li>
       <li class="navigation-item">
-        <a class="navigation-link" href="#">Хочу сюда!</a>
+        <a class="button button-here" href="#">Хочу сюда!</a>
       </li>
     </ul>
   </header>
@@ -117,14 +118,16 @@
             </button>
 
             <label class="catalog-filter-label">
-              от <input class="catalog-filter-input" type="number" name="min-price"> ₽
+              <span class="catalog-filter-span">от</span>
+              <input class="catalog-filter-input" type="number" name="min-price">
             </label>
 
             <label class="catalog-filter-label">
-              до <input class="catalog-filter-input" type="number" name="max-price"> ₽
+              <span class="catalog-filter-span">до</span>
+              <input class="catalog-filter-input" type="number" name="max-price">
             </label>
           </fieldset>
-          <button class="button" type="submit">Применить</button>
+          <button class="button button-price" type="submit">Применить</button>
           <button class="button button-reset" type="button">Сбросить</button>
         </form>
       </section>
@@ -152,7 +155,7 @@
       </a>
       <ul class="hotel-list">
         <li class="hotel-card">
-          <img class="hotel-img" src="" alt="фото гостиницы">
+          <img class="hotel-img" src="images/hotels/hotel-1.jpg" alt="фото гостиницы" width="300" height="206">
           <h4 class="hotel-title">Amara Resort & Spa</h4>
           <span class="hotel-type">Гостиница</span>
           <span class="hotel-price">От 4000 ₽</span>
@@ -162,7 +165,7 @@
           <span class="hotel-rate">Рейтинг: 8,5</span>
         </li>
         <li class="hotel-card">
-          <img class="hotel-img" src="" alt="фото гостиницы">
+          <img class="hotel-img" src="images/hotels/hotel-2.jpg" alt="фото гостиницы" width="300" height="206">
           <h4 class="hotel-title">Desert Quail Inn</h4>
           <span class="hotel-type">Гостиница</span>
           <span class="hotel-price">От 3000 ₽</span>
@@ -172,7 +175,7 @@
           <span class="hotel-rate">Рейтинг: 8,9</span>
         </li>
         <li class="hotel-card">
-          <img class="hotel-img" src="" alt="фото гостиницы">
+          <img class="hotel-img" src="images/hotels/hotel-3.jpg" alt="фото гостиницы" width="300" height="206">
           <h4 class="hotel-title">Villas at Poco Diablo</h4>
           <span class="hotel-type">Гостиница</span>
           <span class="hotel-price">От 2000 ₽</span>
@@ -182,7 +185,7 @@
           <span class="hotel-rate">Рейтинг: 9,2</span>
         </li>
         <li class="hotel-card">
-          <img class="hotel-img" src="" alt="фото гостиницы">
+          <img class="hotel-img" src="images/hotels/hotel-4.jpg" alt="фото гостиницы" width="300" height="206">
           <h4 class="hotel-title">GreenTree Inn</h4>
           <span class="hotel-type">Гостиница</span>
           <span class="hotel-price">От 3000 ₽</span>
@@ -200,22 +203,22 @@
           </a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link pagination-current">1</a>
+          <a class="button pagination-link pagination-current">1</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link" href="#">2</a>
+          <a class="button pagination-link" href="#">2</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link" href="#">3</a>
+          <a class="button pagination-link" href="#">3</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link" href="#">4</a>
+          <a class="button pagination-link" href="#">4</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link" href="#">5</a>
+          <a class="button pagination-link" href="#">5</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link pagination-next" href="#">
+          <a class="button pagination-link pagination-next" href="#">
             <span class="visually-hidden">Следующая страница</span>
           </a>
         </li>
@@ -231,38 +234,38 @@
       </form>
     </section>
     <section class="subscribe">
-      <h2 class="section-title">Подписка</h2>
-      <p class="section-discription">Только полезная информация и никакого спама,
+      <h2 class="section-title">Подпишитесь на рассылку</h2>
+      <p class="section-description">Только полезная информация и никакого спама,
         честное бойскаутское!</p>
       <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-        <label class="subscribe-field field">
+        <label class="subscribe-field field" >
           <span class="visually-hidden">Ваш email</span>
+          <input type="email" name="email" placeholder="Ваш e-mail">
         </label>
-        <input type="email" name="email">
-        <button type="submit">подписаться</button>
+        <button class="button subscribe-button" type="submit">подписаться</button>
       </form>
     </section>
   </main>
   <footer class="page-footer">
     <ul class="social-list">
       <li class="social-item">
-        <a class="social-link" href="twitter.com">
+        <a class="button social-link" href="twitter.com">
           <span class="visually-hidden">Twitter</span>
         </a>
       </li>
       <li class="social-item">
-        <a class="social-link" href="facebook.com">
+        <a class="button social-link" href="facebook.com">
           <span class="visually-hidden">Facebook</span>
         </a>
       </li>
       <li class="social-item">
-        <a class="social-link" href="youtube.com">
+        <a class="button social-link" href="youtube.com">
           <span class="visually-hidden">Youtube</span>
         </a>
       </li>
     </ul>
     <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-    <a class="footer-logo" href="htmlacademy.ru"><img src="" alt="логотип htmlacademy"></a>
+    <a class="footer-logo" href="htmlacademy.ru"><img src="images/html-logo.svg" alt="логотип htmlacademy" width="115" height="33"></a>
   </footer>
 </body>
 </html>
